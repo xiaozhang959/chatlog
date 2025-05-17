@@ -79,14 +79,14 @@ func (s *Session) PlainText(limit int) string {
 	buf.WriteString(") ")
 	buf.WriteString(s.NTime.Format("2006-01-02 15:04:05"))
 	buf.WriteString("\n")
-	if limit > 0 {
-		if len(s.Content) > limit {
-			buf.WriteString(s.Content[:limit])
-			buf.WriteString(" <...>")
-		} else {
-			buf.WriteString(s.Content)
-		}
-	}
+	// if limit > 0 {
+	// 	if len(s.Content) > limit {
+	// 		buf.WriteString(s.Content[:limit])
+	// 		buf.WriteString(" <...>")
+	// 	} else {
+	// 		buf.WriteString(s.Content)
+	// 	}
+	// }
 	buf.WriteString("\n")
 	return buf.String()
 }
